@@ -1,0 +1,30 @@
+{
+	"name": "vite-template-node",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./dist/template.umd.js",
+	"bin": {
+		"template": "./dist/index.js"
+	},
+	"module": "./dist/template.es.js",
+	"exports": {
+		".": {
+			"import": "./dist/template.es.js",
+			"require": "./dist/template.umd.js"
+		}
+	},
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite build --watch"
+	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"dependencies": {
+		"@das.laboratory/nyan": "^1.1.0"
+	},
+	"devDependencies": {
+		"vite": "^2.9.7"
+	}
+}
